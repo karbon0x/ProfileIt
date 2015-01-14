@@ -1,5 +1,11 @@
-<script src="http://fb.me/react-0.12.2.min.js"></script><html>
+<!DOCTYPE html>
+<html>
     <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+
         <title>Template for the site</title>
         <!--CSS files -->
         <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
@@ -16,8 +22,7 @@
         var Navbar = React.createClass({
             render: function () {
         return(
-
-                <div className="ui inverted fixed sticky three item labeled icon init sticky menu" id = "navbar">
+            <div className="ui inverted fixed sticky three item labeled icon init sticky menu" id = "navbar">
                         <a className="active red item">
                             <i className="home icon"></i>
                             Home
@@ -34,7 +39,21 @@
                 );
             }
         })
-        React.render(<Navbar/>,document.body);
+        var Firstslide = React.createClass({
+                render: function(){
+                    return (
+                        <div>
+                        <Navbar/>
+                        <div className="ui centered page grid" id = "first">
+                        <h1  className="ui center header" id = "fheader">Rohan Seth</h1>
+                        <h2  className="ui center header" id = "fheader2"></h2>
+                        </div>
+                        </div>
+
+                    );
+                }
+        });
+        React.render(<Firstslide/>,document.body);
         </script>
     </body>
 </html>
